@@ -1,13 +1,18 @@
+/* Estilos para o background da página */
 body {
-    background-color: #f8f9fa;
+  background-color: #f2f2f2; Evita a repetição da imagem */
 }
 
 .counter-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para melhor legibilidade */
+  padding: 20px;
+  border-radius: 10px;
 }
+
 
 .count {
     font-size: 3rem;
@@ -104,4 +109,103 @@ body {
 
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
+  }
+
+
+  /* Estilos para as bolhas */
+  @keyframes bubble {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+
+  #cervejometro {
+    position: relative;
+    overflow: visible;
+  }
+
+  .bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    opacity: 0;
+    animation: bubble 4s ease-in infinite;
+  }
+
+  /* Criar várias bolhas com diferentes tamanhos, posições e delays ao longo de toda a extensão do texto */
+  .bubble-1 {
+    width: 8px;
+    height: 8px;
+    top: 70%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .bubble-2 {
+    width: 10px;
+    height: 10px;
+    top: 80%;
+    left: 20%;
+    animation-delay: 1s;
+  }
+
+  .bubble-3 {
+    width: 6px;
+    height: 6px;
+    top: 75%;
+    left: 30%;
+    animation-delay: 0.5s;
+  }
+
+  .bubble-4 {
+    width: 12px;
+    height: 12px;
+    top: 60%;
+    left: 40%;
+    animation-delay: 1.5s;
+  }
+
+  .bubble-5 {
+    width: 9px;
+    height: 9px;
+    top: 85%;
+    left: 50%;
+    animation-delay: 2s;
+  }
+
+  .bubble-6 {
+    width: 7px;
+    height: 7px;
+    top: 65%;
+    left: 60%;
+    animation-delay: 0.7s;
+  }
+
+  .bubble-7 {
+    width: 11px;
+    height: 11px;
+    top: 78%;
+    left: 70%;
+    animation-delay: 1.2s;
+  }
+
+  .bubble-8 {
+    width: 6px;
+    height: 6px;
+    top: 82%;
+    left: 80%;
+    animation-delay: 2.5s;
+  }
+
+  .bubble-9 {
+    width: 10px;
+    height: 10px;
+    top: 67%;
+    left: 90%;
+    animation-delay: 1.8s;
   }

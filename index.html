@@ -16,33 +16,39 @@
 </head>
 <body>
 
-     <!--Navbar-->
-     <nav class="navbar bg-body-tertiary " data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="https://i.ibb.co/qkkX5JG/Gemini-Generated-Image-5ts87w5ts87w5ts8.png" alt="Logo" width="26" height="30" class="d-inline-block align-text-top">
-            
-          </a>
-        </div>
-      </nav>
+<!--Navbar-->
+<nav class="navbar text-bg-warning" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- Logo alinhada à esquerda -->
+    <a class="navbar-brand" href="#">
+      <img src="https://i.ibb.co/qkkX5JG/Gemini-Generated-Image-5ts87w5ts87w5ts8.png" alt="Logo" width="26" height="30" class="d-inline-block align-text-top">
+    </a>
+    
+    <!-- Título centralizado com efeito de bolhas -->
+    <div class="mx-auto text-center">
+      <h1 class="mb-0 text-light" style="font-size: 2rem; position: relative;" id="cervejometro">
+        Cervejômetro
+      </h1>
+    </div>
+  </div>
+</nav>
 
-    <div class="container text-center mt-5">
-        <h1>🍺🍢 Cervejômetro 🍺🍢 </h1>
 
-       
+
+    <div class="container text-center mt-5">      
 
         <!-- Contador de Cervejas -->
          
         <div class="counter-box"> 
-            <h1>🍺</h1>      
-            <button id="beer-minus" class="btn btn-danger button">-</button>
-            <span id="beer-count" class="count">0</span>
-            <button id="beer-plus" class="btn btn-success button">+</button>
-        </div>
+          <h1 class="me-3">🍺</h1>  <!-- Adiciona uma margem à direita -->
+          <button id="beer-minus" class="btn btn-danger button">-</button>
+          <span id="beer-count" class="count">0</span>
+          <button id="beer-plus" class="btn btn-success button">+</button>
+      </div>
 
         <!-- Contador de Espetos -->
         <div class="counter-box">
-            <h1>🍢</h1>  
+            <h1 class="me-3">🍢</h1>  
             <button id="skewer-minus" class="btn btn-danger button">-</button>
             <span id="skewer-count" class="count">0</span>
             <button id="skewer-plus" class="btn btn-success button">+</button>
@@ -51,19 +57,27 @@
         <!-- Campo de valor da Cerveja e Espeto -->
         <div class="mb-3">
             <label for="beer-price" class="form-label">Valor da Cerveja (R$):</label>
+            <!-- Mensagem de erro para valor da cerveja -->
+<div id="beer-error" class="text-danger" style="display: none;">Falta inserir um valor!</div>
+
             <input type="number" class="form-control" id="beer-price" placeholder="Ex: 5.00" step="0.01">
         </div>
         <div class="mb-3">
             <label for="skewer-price" class="form-label">Valor do Espeto (R$):</label>
+            <!-- Mensagem de erro para valor da cerveja -->
+<div id="skewer-error" class="text-danger" style="display: none;">Falta inserir um valor!
+
+</div>
+
             <input type="number" class="form-control" id="skewer-price" placeholder="Ex: 3.00" step="0.01">
         </div>
 
-        <!-- Total da Conta -->
-        <div class="total">
-            <p>Total da Conta: R$ <span id="total-bill">0.00</span></p>
-        </div>
-    </div>
-
+          <!-- Exibir total -->
+<div class="total mt-5">
+  <h3 class="me-3">🗒️ Total: R$ <span id="total-bill">0.00</span></h3>
+  <!-- Botão Nova Comanda -->
+  <button id="new-order" class="btn btn-danger">Nova Comanda</button>
+</div>
 
 
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -81,6 +95,10 @@
           <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
         </symbol>
       </svg>
+
+
+
+    
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top fixed-bottom text-bg-dark" >
         <div class="col-md-4 d-flex align-items-center">
