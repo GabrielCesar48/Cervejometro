@@ -14,14 +14,15 @@ const totalBillDisplay = document.getElementById('total-bill');
 const beerPriceInput = document.getElementById('beer-price');
 const skewerPriceInput = document.getElementById('skewer-price');
 const beerError = document.getElementById('beer-error');
-const skewerError = document.createElement('div'); 
+const skewerError = document.getElementById('skewer-error');
+//const skewerError = document.createElement('div'); 
 
 
 // Criação do elemento de erro para espeto
-skewerError.classList.add('text-danger'); // Adiciona a classe de texto vermelho
-skewerError.style.display = 'none'; // Oculta inicialmente
-skewerError.innerText = 'Falta inserir um valor para o espeto.'; // Mensagem de erro para espeto
-document.querySelector('.total').appendChild(skewerError); // Adiciona o elemento de erro ao DOM
+// skewerError.classList.add('text-danger'); // Adiciona a classe de texto vermelho
+// skewerError.style.display = 'none'; // Oculta inicialmente
+// skewerError.innerText = 'Falta inserir um valor para o espeto.'; // Mensagem de erro para espeto
+// document.querySelector('.total').appendChild(skewerError); // Adiciona o elemento de erro ao DOM
 
 // Função para atualizar o total da conta
 function updateTotal() {
